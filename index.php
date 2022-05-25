@@ -1,13 +1,19 @@
 <?php
 require 'Morse.php';
+$string = readline("Write your message to convert to Morse!");
 $chars = array();
-foreach (str_split("TeXt") as $value){
-    array_push($chars,array("is_big" => ctype_upper($value)));
+// Checking if character is uppercase or lowercase and adding that information to that character
+foreach (str_split($string) as $value){
+    array_push($chars,array("upper" => ctype_upper($value)));
 }
-foreach (str_split("TEXT") as $i => $value){
+$STRING = strtoupper($string);
+foreach (str_split($STRING) as $i => $value){
     array_push($chars[$i],$morse[$value]);
 }
-print_r($chars);
+// Printing on screen in Morse code
+foreach($chars as $char) {
+    echo $char[0];
+}
 
 
 
