@@ -12,7 +12,7 @@ foreach (str_split($STRING) as $i => $value){
 }
 // Printing on screen in Morse code
 foreach($chars as $char) {
-    echo $char[0];
+    echo $char[0] . ' ';
 }
 // Morse to alphabet and decoding
 $esrom = array_flip($morse);
@@ -31,6 +31,18 @@ foreach ($chars as $char) {
     }
     $i++;
 }
+
+$decode = explode(' ',preg_replace('/ {5}/',' | ',readline()));
+var_dump($decode);
+foreach ($decode as $value){
+    if($value == "|"){
+        echo " ";
+    }
+    else {
+        echo $esrom[$value];
+    }
+}
+
 
 
 
