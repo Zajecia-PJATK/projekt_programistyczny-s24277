@@ -27,3 +27,33 @@ $affine = array(
     "24" => 'y',
     "25" => 'z'
 );
+$eniffa = array_flip($affine);
+
+
+function codeAffine($a,$b,$string){
+    global $affine,$eniffa;
+if($a == 0){
+    echo "impossible to decipher";
+    exit;
+}
+$string = str_split(strtolower($string));
+foreach ($string as $i => $value){
+    $code[$i] = $eniffa[$value];
+}
+var_dump($code);
+foreach ($code as $i => $value){
+    $decode[$i] = $a * $value + ($b%6);
+}
+var_dump($decode);
+    foreach ($decode as $value) {
+        echo $affine[$value%26];
+}
+
+}
+
+
+function decodeAffine(){
+
+
+}
+

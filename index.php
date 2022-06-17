@@ -15,8 +15,10 @@
 </html>
 <?php
 require 'Morse.php';
-$example = codeMorse("Karol");
-decodingMorse($example);
-DecodingNMorse("-.- .- .-. --- .-..");
-
+require 'Alphabet.php';
+//$example = codeMorse("Karol");
+//decodingMorse($example);
+//DecodingNMorse("-.- .- .-. --- .-..");
+//codeAffine(2,3,"Karol");
+codeAffine(0,0,"Karol");
 ?>
