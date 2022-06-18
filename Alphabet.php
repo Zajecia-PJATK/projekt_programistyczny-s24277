@@ -30,30 +30,65 @@ $affine = array(
 $eniffa = array_flip($affine);
 
 
-function codeAffine($a,$b,$string){
-    global $affine,$eniffa;
-if($a == 0){
-    echo "impossible to decipher";
-    exit;
-}
-$string = str_split(strtolower($string));
-foreach ($string as $i => $value){
-    $code[$i] = $eniffa[$value];
-}
-var_dump($code);
-foreach ($code as $i => $value){
-    $decode[$i] = $a * $value + ($b%6);
-}
-var_dump($decode);
+function codeAffine($a,$b,$string)
+{
+    global $affine, $eniffa;
+    if ($a == 0 || gmp_intval(gmp_invert($a,26)) == false) {
+        exit("impossible to decipher (change first number)");
+    }
+    $string = str_split(strtolower($string));
+    foreach ($string as $i => $value) {
+        if($value == " "){
+            $code[$i] = " ";
+        }
+        else{
+            $code[$i] = $eniffa[$value];
+        }
+    }
+    foreach ($code as $i => $value) {
+        if($value == " "){
+            $decode[$i] = " ";
+        }else{
+            $decode[$i] = ($a * $value + $b) % 26;
+        }
+    }
     foreach ($decode as $value) {
-        echo $affine[$value%26];
+        if($value == " "){
+            echo " ";
+        }else{
+            echo $affine[$value];
+        }
+    }
 }
 
-}
 
-
-function decodeAffine(){
-
-
+function decodeAffine($a,$b,$string){
+    global $affine,$eniffa;
+    if($a == 0){
+        exit("impossible to decipher");
+    }
+    $gmp = gmp_intval(gmp_invert($a,26));
+    $string = str_split(strtolower($string));
+    foreach ($string as $i => $value){
+        if($value == " "){
+            $code[$i] = " ";
+        }else{
+            $code[$i] = $eniffa[$value];
+        }
+    }
+    foreach ($code as $i => $value){
+        if($value == " "){
+            $decode[$i] = " ";
+        }else{
+            $decode[$i] = abs(($gmp*($value - $b))%26)  ;
+        }
+    }
+    foreach ($decode as $value) {
+        if($value == " "){
+            echo " ";
+        }else{
+            echo $affine[$value];
+        }
+    }
 }
 
