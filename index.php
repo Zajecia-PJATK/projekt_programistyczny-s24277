@@ -16,6 +16,7 @@
 <?php
 require 'Morse.php';
 require 'Alphabet.php';
+require 'Vigenere.php';
 //$example = codeMorse("Karol");
 //decodingMorse($example);
 //DecodingNMorse("-.- .- .-. --- .-..");
