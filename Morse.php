@@ -36,8 +36,16 @@ $morse = array(
     '8' => "---..",
     '9' => "----.",
     '0' => "-----",
-    ' ' => "   ",
+    "."=>".-.-.-",
+    ","=>"--..--",
+    "?"=>"..--..",
+    "/"=>"-..-.",
+    ' ' => "   "
 );
+
+// Morse to alphabet
+$esrom = array_flip($morse);
+
 function codeMorse($string)
 {
     global $morse;
@@ -50,19 +58,17 @@ function codeMorse($string)
     foreach (str_split($STRING) as $i => $value) {
         $chars[$i][] = $morse[$value];
     }
-// Printing on screen in Morse code
-    foreach ($chars as $char) {
-        echo $char[0] . ' ';
-    }
+    return $chars;
 }
+// Printing on screen in Morse code
+//foreach ($chars as $char) {
+//    echo $char[0] . ' ';
+//}
 
 
-// Morse to alphabet
-$esrom = array_flip($morse);
 
 
-function decodingMorse($chars)
-{
+function decodingMorse(array $chars){
     global $esrom;
 
 // Decoding my morse
@@ -70,18 +76,24 @@ function decodingMorse($chars)
     foreach ($chars as $char) {
         $srahc[] = $esrom[$char[0]];
     }
-// Checking if uppercase or lowercase and printing in alphabet
+    // Checking if uppercase or lowercase and printing in alphabet
 $i =0;
 foreach ($chars as $char) {
     if($char["upper"] == true){
-        echo $srahc[$i];
+        $srahc[$i] =  $srahc[$i];
     }
     else{
-        echo strtolower($srahc[$i]);
+        $srahc[$i] = strtolower($srahc[$i]);
     }
     $i++;
 }
+return $srahc;
 }
+
+
+
+
+
 function DecodingNMorse($input)
 {
     global $esrom;
