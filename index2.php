@@ -9,7 +9,7 @@
         margin:0;
     }
     textarea {
-        width: 100%;
+        width: 800px;
         height: 150px;
         padding: 12px 20px;
         margin: 4px 0;
@@ -17,6 +17,7 @@
         border: 2px solid DodgerBlue;
         background-color: white;
         border-radius: 4px;
+        float: right;
     }
     input[type=submit] {
         background-color: DodgerBlue;
@@ -25,7 +26,7 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        float: right;
+        float: bottom;
     }
     label{
         color: DodgerBlue;
@@ -86,7 +87,7 @@
 <form>
     <label for="fname">First Name</label>
     <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Krowa" style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Daje" style="height:200px"></textarea>
     </div>
     <div class="row">
         <input type="submit" value="Submit">

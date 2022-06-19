@@ -30,7 +30,7 @@ $affine = array(
 $eniffa = array_flip($affine);
 
 
-function codeAffine($a,$b,$string)
+function codeAffine(int $a,int $b,$string)
 {
     global $affine, $eniffa;
     if ($a == 0 || gmp_intval(gmp_invert($a,26)) == false) {
@@ -62,7 +62,7 @@ function codeAffine($a,$b,$string)
 }
 
 
-function decodeAffine($a,$b,$string){
+function decodeAffine(int $a, int $b,$string){
     global $affine,$eniffa;
     if($a == 0){
         exit("impossible to decipher");

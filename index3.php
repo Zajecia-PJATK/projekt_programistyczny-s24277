@@ -86,7 +86,7 @@
 <form>
     <label for="fname">First Name</label>
     <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Krowa" style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px"></textarea>
     </div>
     <div class="row">
         <input type="submit" value="Submit">
