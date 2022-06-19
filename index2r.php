@@ -152,7 +152,7 @@
         </form>
     </div>
     <div class="div8">
-        <h  style="font-size:60px; color: DodgerBlue;" >Text to Affine</h>
+        <h  style="font-size:60px; color: DodgerBlue;" >Affine to Text</h>
     </div>
 </div>
 </body>

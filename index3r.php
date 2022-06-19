@@ -25,7 +25,6 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        float: bottom;
     }
     label{
         color: DodgerBlue;
@@ -40,12 +39,11 @@
 
     .div1 { grid-area: 1 / 1 / 2 / 2; }
     .div2 { grid-area: 2 / 2 / 3 / 3; }
-    .div3 { grid-area: 3 / 2 / 4 / 3; }
-    .div4 { grid-area: 2 / 3 / 4 / 5; }
-    .div5 { grid-area: 4 / 3 / 6 / 5; }
-    .div6 { grid-area: 6 / 3 / 7 / 4; }
-    .div7 { grid-area: 6 / 4 / 7 / 5; }
-    .div8 { grid-area: 1 / 2 / 2 / 4; }
+    .div3 { grid-area: 2 / 3 / 4 / 5; }
+    .div4 { grid-area: 4 / 3 / 6 / 5; }
+    .div5 { grid-area: 6 / 3 / 7 / 4; }
+    .div6 { grid-area: 6 / 4 / 7 / 5; }
+    .div7 { grid-area: 1 / 2 / 2 / 4; }
     /* Dropdown Button */
     .dropbtn {
         border-radius: 0px 0px 60px 0px;
@@ -107,33 +105,32 @@
     </div>
     <div class="div2">
         <form>
-            <label for="fname">First number</label>
+            <label for="fname">Key</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Daje" style="height:100%"></textarea>
+                <textarea id="subject" name="subject" placeholder="Mleko" style="height:50px"></textarea>
             </div>
         </form>
     </div>
     <div class="div3">
         <form>
-            <label for="fname">Second number</label>
+            <label for="fname">Your Input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Daje" style="height:100%"></textarea>
+                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px"></textarea>
             </div>
         </form>
     </div>
     <div class="div4">
         <form>
-            <label for="fname">Your input</label>
+            <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Daje" style="height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px"></textarea>
             </div>
         </form>
     </div>
     <div class="div5">
         <form>
-            <label for="fname">Result</label>
-            <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Daje" style="height:200px"></textarea>
+            <div class="row">
+                <input type="submit" value="Submit">
             </div>
         </form>
     </div>
@@ -145,19 +142,12 @@
         </form>
     </div>
     <div class="div7">
-        <form>
-            <div class="row">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
-    </div>
-    <div class="div8">
-        <h  style="font-size:60px; color: DodgerBlue;" >Text to Affine</h>
+        <h  style="font-size:60px; color: DodgerBlue;" >Vigenere to Text</h>
     </div>
 </div>
 </body>
 </html>
 <?php
-require 'Alphabet.php';
+require 'Vigenere.php';
 
 ?>
