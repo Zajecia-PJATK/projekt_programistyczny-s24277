@@ -26,6 +26,7 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        float: right;
     }
     label{
         color: DodgerBlue;
@@ -34,17 +35,16 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        grid-column-gap: 10px;
+        grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
 
     .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 2 / 2 / 3 / 3; }
-    .div3 { grid-area: 2 / 3 / 4 / 5; }
-    .div4 { grid-area: 4 / 3 / 6 / 5; }
-    .div5 { grid-area: 6 / 3 / 7 / 4; }
-    .div6 { grid-area: 6 / 4 / 7 / 5; }
-    .div7 { grid-area: 1 / 2 / 2 / 4; }
+    .div2 { grid-area: 2 / 2 / 4 / 5; }
+    .div3 { grid-area: 4 / 2 / 6 / 5; }
+    .div4 { grid-area: 6 / 3 / 7 / 4; }
+    .div5 { grid-area: 6 / 4 / 7 / 5; }
+    .div6 { grid-area: 1 / 2 / 2 / 4; }
     /* Dropdown Button */
     .dropbtn {
         border-radius: 0px 0px 60px 0px;
@@ -97,35 +97,34 @@
             <button class="dropbtn">Dropdown</button>
             <div class="dropdown-content">
                 <a href="./index.php">Text to Morse</a>
-                <a href="./indexr.php">Morse to Text</a>
-                <a href="./index2.php">Text to Affine</a>
-                <a href="./index2r.php">Affine to Text</a>
-                <a href="./index3.php">Text to Vigenere</a>
-                <a href="./index3r.php">Vigenere to Text</a>
+                <a href="./Morse_to_text.php">Morse to Text</a>
+                <a href="./Text_to_affine.php">Text to Affine</a>
+                <a href="./Affine_to_text.php">Affine to Text</a>
+                <a href="./Text_to_vigenere.php">Text to Vigenere</a>
+                <a href="./Vigenere_to_text.php">Vigenere to Text</a>
             </div>
         </div>
     </div>
     <div class="div2">
         <form>
-            <label for="fname">Key</label>
+            <label for="fname">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:50px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Krowa" style="height:200px"></textarea>
             </div>
         </form>
     </div>
     <div class="div3">
         <form>
-            <label for="fname">Your Input</label>
+            <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Krowa" style="height:200px" disabled></textarea>
             </div>
         </form>
     </div>
     <div class="div4">
         <form>
-            <label for="fname">Result</label>
-            <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px" disabled></textarea>
+            <div class="row">
+                <input type="submit" value="Submit">
             </div>
         </form>
     </div>
@@ -137,19 +136,12 @@
         </form>
     </div>
     <div class="div6">
-        <form>
-            <div class="row">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
-    </div>
-    <div class="div7">
-        <h  style="font-size:60px; color: DodgerBlue;" >Vigenere to Text</h>
+        <h  style="font-size:60px; color: DodgerBlue;" >Morse to Text</h>
     </div>
 </div>
 </body>
 </html>
 <?php
-require 'Vigenere.php';
+require 'Morse.php';
 
 ?>

@@ -99,11 +99,11 @@
             <button class="dropbtn">Dropdown</button>
             <div class="dropdown-content">
                 <a href="./index.php">Text to Morse</a>
-                <a href="./indexr.php">Morse to Text</a>
-                <a href="./index2.php">Text to Affine</a>
-                <a href="./index2r.php">Affine to Text</a>
-                <a href="./index3.php">Text to Vigenere</a>
-                <a href="./index3r.php">Vigenere to Text</a>
+                <a href="./Morse_to_text.php">Morse to Text</a>
+                <a href="./Text_to_affine.php">Text to Affine</a>
+                <a href="./Affine_to_text.php">Affine to Text</a>
+                <a href="./Text_to_vigenere.php">Text to Vigenere</a>
+                <a href="./Vigenere_to_text.php">Vigenere to Text</a>
             </div>
         </div>
     </div>
@@ -154,7 +154,7 @@
         </form>
     </div>
     <div class="div8">
-        <h  style="font-size:60px; color: DodgerBlue;" >Text to Affine</h>
+        <h  style="font-size:60px; color: DodgerBlue;" >Affine to Text</h>
     </div>
 </div>
 </body>
