@@ -60,12 +60,6 @@ function codeMorse($string)
     }
     return $chars;
 }
-// Printing on screen in Morse code
-//foreach ($chars as $char) {
-//    echo $char[0] . ' ';
-//}
-
-
 
 
 function decodingMorse(array $chars){
@@ -90,11 +84,7 @@ foreach ($chars as $char) {
 return $srahc;
 }
 
-
-
-
-
-function DecodingNMorse($input)
+function DecodingNormalMorse($input)
 {
     global $esrom;
 //Decoding normal morse

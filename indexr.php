@@ -2,6 +2,7 @@
 <html>
 <style>
     body{
+        text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
         background-image: url('zCRSn1.gif');
         background-size: cover;
         height: 100vh;
@@ -77,6 +78,7 @@
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        text-shadow: none;
     }
 
     /* Change color of dropdown links on hover */
@@ -115,7 +117,7 @@
         <form>
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Krowa" style="height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Krowa" style="height:200px" disabled></textarea>
             </div>
         </form>
     </div>

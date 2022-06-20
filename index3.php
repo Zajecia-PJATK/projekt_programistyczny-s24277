@@ -2,6 +2,7 @@
 <html>
 <style>
     body{
+        text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
         background-image: url('zCRSn1.gif');
         background-size: cover;
         height: 100vh;
@@ -17,6 +18,7 @@
         border: 2px solid DodgerBlue;
         background-color: white;
         border-radius: 4px;
+        resize:none;
     }
     input[type=submit] {
         background-color: DodgerBlue;
@@ -77,6 +79,7 @@
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        text-shadow: none;
     }
 
     /* Change color of dropdown links on hover */
@@ -92,7 +95,7 @@
 <div class="parent">
     <div class="div1">
         <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
+            <button class="dropbtn">Codes</button>
             <div class="dropdown-content">
                 <a href="./index.php">Text to Morse</a>
                 <a href="./indexr.php">Morse to Text</a>
@@ -123,7 +126,7 @@
         <form>
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px" disabled></textarea>
             </div>
         </form>
     </div>
