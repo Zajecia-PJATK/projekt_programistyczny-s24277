@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <link rel="stylesheet" href="style.scss">
     <style>
@@ -13,6 +13,9 @@
     </style>
 </head>
 <body>
+<?php
+require 'Vigenere.php';
+?>
 <form class="parent" method="post">
     <div class="div1">
         <div class="dropdown">
@@ -62,7 +65,3 @@
 </form>
 </body>
 </html>
-<?php
-require 'Vigenere.php';
-
-?>
