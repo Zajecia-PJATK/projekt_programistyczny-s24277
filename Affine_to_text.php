@@ -61,7 +61,7 @@
             </div>
     </div>
     <div class="div8">
-        <h  style="font-size:60px; color: DodgerBlue;" >Affine to Text</h>
+        <h  style="font-size:60px; color: LawnGreen; float: right;" >Affine to Text</h>
     </div>
 </form>
 

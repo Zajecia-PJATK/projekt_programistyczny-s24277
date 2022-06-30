@@ -66,7 +66,7 @@
         </form>
     </div>
     <div class="div7">
-        <h  style="font-size:60px; color: DodgerBlue;" >Vigenere to Text</h>
+        <h  style="font-size:60px; color: LawnGreen; float: right;" >Vigenere to Text</h>
     </div>
 </div>
 </body>

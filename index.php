@@ -55,7 +55,7 @@
         </form>
     </div>
     <div class="div6">
-        <h  style="font-size:60px; color: DodgerBlue;" >Text to Morse</h>
+        <h  style="font-size:60px; color: LawnGreen; float: right;" >Text to Morse</h>
     </div>
 </div>
 </body>
