@@ -12,13 +12,13 @@ textarea {
     padding: 12px 20px;
     margin: 4px 0;
     box-sizing: border-box;
-    border: 2px solid DodgerBlue;
+    border: 2px solid LawnGreen;
     background-color: white;
     border-radius: 4px;
     resize: none;
 }
 input[type=submit] {
-    background-color: DodgerBlue;
+    background-color: LawnGreen;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -27,7 +27,7 @@ input[type=submit] {
     float: bottom;
 }
 label{
-    color: DodgerBlue;
+    color: LawnGreen;
 }
 .parent {
     display: grid;
@@ -48,7 +48,7 @@ label{
 /* Dropdown Button */
 .dropbtn {
     border-radius: 0px 0px 60px 0px;
-    background-color: DodgerBlue;
+    background-color: LawnGreen;
     color: black;
     padding: 16px;
     font-size: 16px;
@@ -65,7 +65,7 @@ label{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: DodgerBlue;
+    background-color: LawnGreen;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(30, 144, 255,0.2);
     z-index: 1;
@@ -73,7 +73,7 @@ label{
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: DodgerBlue;
+    color: LawnGreen;
     background: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -88,4 +88,4 @@ label{
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #1E90FF;}
+.dropdown:hover .dropbtn {background-color: #7CFC00;}
