@@ -30,7 +30,7 @@ require 'Morse.php';
     </div>
     <div class="div2">
         <form>
-            <label for="fname">Your input</label>
+            <label for="String">Your input</label>
             <div class="col-75">
                 <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
@@ -38,7 +38,7 @@ require 'Morse.php';
     </div>
     <div class="div3">
         <form>
-            <label for="fname">Result</label>
+            <label for="Result">Result</label>
             <div class="col-75">
                 <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo DecodingNormalMorse($_POST['String']);?></textarea>
             </div>

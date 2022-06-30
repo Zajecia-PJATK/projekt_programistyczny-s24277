@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style.scss">
-<style>
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 2 / 2 / 3 / 3; }
-    .div3 { grid-area: 3 / 2 / 4 / 3; }
-    .div4 { grid-area: 2 / 3 / 4 / 5; }
-    .div5 { grid-area: 4 / 3 / 6 / 5; }
-    .div6 { grid-area: 6 / 3 / 7 / 4; }
-    .div7 { grid-area: 6 / 4 / 7 / 5; }
-    .div8 { grid-area: 1 / 2 / 2 / 4; }
-</style>
+<head>
+    <link rel="stylesheet" href="style.scss">
+    <style>
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 2 / 2 / 3 / 3; }
+        .div3 { grid-area: 3 / 2 / 4 / 3; }
+        .div4 { grid-area: 2 / 3 / 4 / 5; }
+        .div5 { grid-area: 4 / 3 / 6 / 5; }
+        .div6 { grid-area: 6 / 3 / 7 / 4; }
+        .div7 { grid-area: 6 / 4 / 7 / 5; }
+        .div8 { grid-area: 1 / 2 / 2 / 4; }
+    </style>
+</head>
 <body>
 <?php
 require 'Alphabet.php';
@@ -31,25 +33,25 @@ require 'Alphabet.php';
         </div>
     </div>
     <div class="div2">
-            <label for="fname">First number</label>
+            <label for="A">First number</label>
             <div class="col-75">
                 <textarea id="subject" name="A" placeholder="First number" style="height:100%"><?php echo $_POST['A'];?></textarea>
             </div>
     </div>
     <div class="div3">
-            <label for="fname">Second number</label>
+            <label for="B">Second number</label>
             <div class="col-75">
                 <textarea id="subject" name="B" placeholder="Second number" style="height:100%"><?php echo $_POST['B'];?></textarea>
             </div>
     </div>
     <div class="div4">
-            <label for="fname">Your input</label>
+            <label for="String">Your input</label>
             <div class="col-75">
                 <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
     </div>
     <div class="div5">
-            <label for="fname">Result</label>
+            <label for="Result">Result</label>
             <div class="col-75">
                 <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo decodeAffine($_POST['A'],$_POST['B'],$_POST['String']); ?></textarea>
             </div>
@@ -68,6 +70,5 @@ require 'Alphabet.php';
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Affine to Text</h>
     </div>
 </form>
-
 </body>
 </html>

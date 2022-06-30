@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html >
+<head>
 <link rel="stylesheet" href="style.scss">
 <style>
     .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -11,6 +12,7 @@
     .div7 { grid-area: 6 / 4 / 7 / 5; }
     .div8 { grid-area: 1 / 2 / 2 / 4; }
 </style>
+</head>
 <body>
 <?php
 require 'Alphabet.php';
@@ -32,7 +34,7 @@ require 'Alphabet.php';
     </div>
     <div class="div2">
         <form>
-            <label for="fname">First number</label>
+            <label for="A">First number</label>
             <div class="col-75">
                 <textarea id="subject" name="A" placeholder="First number" style="height:100%"><?php echo $_POST['A'];?></textarea>
             </div>
@@ -40,7 +42,7 @@ require 'Alphabet.php';
     </div>
     <div class="div3">
         <form>
-            <label for="fname">Second number</label>
+            <label for="B">Second number</label>
             <div class="col-75">
                 <textarea id="subject" name="B" placeholder="Second number" style="height:100%"><?php echo $_POST['B'];?></textarea>
             </div>
@@ -48,7 +50,7 @@ require 'Alphabet.php';
     </div>
     <div class="div4">
         <form>
-            <label for="fname">Your input</label>
+            <label for="String">Your input</label>
             <div class="col-75">
                 <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
@@ -56,7 +58,7 @@ require 'Alphabet.php';
     </div>
     <div class="div5">
         <form>
-            <label for="fname">Result</label>
+            <label for="Result">Result</label>
             <div class="col-75">
                 <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo codeAffine($_POST['A'],$_POST['B'],$_POST['String']);?></textarea>
             </div>
