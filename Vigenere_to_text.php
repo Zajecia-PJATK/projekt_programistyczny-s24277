@@ -31,7 +31,7 @@
         <form>
             <label for="fname">Key</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Key" style="height:50px"></textarea>
+                <textarea id="subject" name="Key" placeholder="Key" style="height:50px"><?php echo $_POST['Key'];?></textarea>
             </div>
         </form>
     </div>
@@ -39,7 +39,7 @@
         <form>
             <label for="fname">Your Input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Your input" style="height:200px"></textarea>
+                <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
         </form>
     </div>
@@ -47,7 +47,8 @@
         <form>
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Result" style="height:200px" disabled></textarea>
+                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo Decipher($_POST['String'],$_POST['Key']);
+                    ?></textarea>
             </div>
         </form>
     </div>

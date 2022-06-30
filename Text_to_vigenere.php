@@ -46,7 +46,7 @@ require 'Vigenere.php';
     <div class="div4">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="Result" name="Result" style="height:200px" disabled><?php echo Encipher($_POST['Key'],$_POST['String']);
+                <textarea id="Result" name="Result" style="height:200px" disabled><?php echo Encipher($_POST['String'],$_POST['Key']);
                     ?></textarea>
             </div>
     </div>
