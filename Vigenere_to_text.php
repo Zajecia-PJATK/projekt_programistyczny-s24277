@@ -94,7 +94,7 @@
 <div class="parent">
     <div class="div1">
         <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
+            <button class="dropbtn">Codes</button>
             <div class="dropdown-content">
                 <a href="./index.php">Text to Morse</a>
                 <a href="./Morse_to_text.php">Morse to Text</a>
@@ -109,7 +109,7 @@
         <form>
             <label for="fname">Key</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:50px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Key" style="height:50px"></textarea>
             </div>
         </form>
     </div>
@@ -117,7 +117,7 @@
         <form>
             <label for="fname">Your Input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Your input" style="height:200px"></textarea>
             </div>
         </form>
     </div>
@@ -125,7 +125,7 @@
         <form>
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px" disabled></textarea>
+                <textarea id="subject" name="subject" placeholder="Result" style="height:200px" disabled></textarea>
             </div>
         </form>
     </div>

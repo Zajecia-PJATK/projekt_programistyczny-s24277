@@ -26,7 +26,6 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        float: right;
     }
     label{
         color: DodgerBlue;
@@ -42,7 +41,7 @@
     .div1 { grid-area: 1 / 1 / 2 / 2; }
     .div2 { grid-area: 2 / 2 / 4 / 5; }
     .div3 { grid-area: 4 / 2 / 6 / 5; }
-    .div4 { grid-area: 6 / 3 / 7 / 4; }
+    .div4 { grid-area: 6 / 2 / 7 / 3; }
     .div5 { grid-area: 6 / 4 / 7 / 5; }
     .div6 { grid-area: 1 / 2 / 2 / 4; }
     /* Dropdown Button */
@@ -94,7 +93,7 @@
 <div class="parent">
     <div class="div1">
         <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
+            <button class="dropbtn">Codes</button>
             <div class="dropdown-content">
                 <a href="./index.php">Text to Morse</a>
                 <a href="./Morse_to_text.php">Morse to Text</a>
@@ -109,7 +108,7 @@
         <form>
             <label for="fname">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Krowa" style="height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Your input" style="height:200px"></textarea>
             </div>
         </form>
     </div>
@@ -117,7 +116,7 @@
         <form>
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Krowa" style="height:200px" disabled></textarea>
+                <textarea id="subject" name="subject" placeholder="Result" style="height:200px" disabled></textarea>
             </div>
         </form>
     </div>

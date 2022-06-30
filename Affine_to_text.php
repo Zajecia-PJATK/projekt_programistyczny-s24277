@@ -93,10 +93,10 @@
     .dropdown:hover .dropbtn {background-color: #1E90FF;}
 </style>
 <body>
-<div class="parent">
+<form class="parent" method="post">
     <div class="div1">
         <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
+            <button class="dropbtn">Codes</button>
             <div class="dropdown-content">
                 <a href="./index.php">Text to Morse</a>
                 <a href="./Morse_to_text.php">Morse to Text</a>
@@ -108,54 +108,44 @@
         </div>
     </div>
     <div class="div2">
-        <form>
             <label for="fname">First number</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Daje" style="height:100%"></textarea>
+                <textarea id="subject" name="subject" placeholder="First number" style="height:100%"></textarea>
             </div>
-        </form>
     </div>
     <div class="div3">
-        <form>
             <label for="fname">Second number</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Daje" style="height:100%"></textarea>
+                <textarea id="subject" name="subject" placeholder="Second number" style="height:100%"></textarea>
             </div>
-        </form>
     </div>
     <div class="div4">
-        <form>
             <label for="fname">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Daje" style="height:200px"></textarea>
+                <textarea id="subject" name="input_box" placeholder="Your input" style="height:200px"></textarea>
             </div>
-        </form>
     </div>
     <div class="div5">
-        <form>
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Daje" style="height:200px" disabled></textarea>
+                <textarea id="subject" name="result_box" placeholder="Result" style="height:200px" disabled>
+                    <?php echo $_POST['input_box']; ?>
+                </textarea>
             </div>
-        </form>
     </div>
     <div class="div6">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
     <div class="div7">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
-    <div class="div8">
-        <h  style="font-size:60px; color: DodgerBlue;" >Affine to Text</h>
-    </div>
+</form>
+<div class="div8">
+    <h  style="font-size:60px; color: DodgerBlue;" >Affine to Text</h>
 </div>
 </body>
 </html>

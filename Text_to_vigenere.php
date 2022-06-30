@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<head>
+</head>
 <style>
     body{
         text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
@@ -92,7 +94,34 @@
     .dropdown:hover .dropbtn {background-color: #1E90FF;}
 </style>
 <body>
-<div class="parent">
+<?php
+require 'Vigenere.php';
+$Key = $input = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["Key"])) {
+        $nameErr = "Key is required";
+    } else {
+        $Key = test_input($_POST["Key"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z-' ]*$/",$Key)) {
+            $nameErr = "Only letters and white space allowed";
+        }
+    }
+    if (empty($_POST["input"])) {
+        $input = "";
+    } else {
+        $input = test_input($_POST["input"]);
+    }
+}
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
+<form class="parent" method="post">
     <div class="div1">
         <div class="dropdown">
             <button class="dropbtn">Codes</button>
@@ -107,50 +136,41 @@
         </div>
     </div>
     <div class="div2">
-        <form>
-            <label for="fname">Key</label>
+            <label for="Key">Key</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:50px"></textarea>
+                <textarea id="Key" name="Key" placeholder="Key" style="height:50px" ><?php echo $_POST['Key'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div3">
-        <form>
-            <label for="fname">Your input</label>
+            <label for="String">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px"></textarea>
+                <textarea id="String" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div4">
-        <form>
-            <label for="fname">Result</label>
+            <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Mleko" style="height:200px" disabled></textarea>
+                <textarea id="Result" name="Result" style="height:200px" disabled><?php echo Encipher($_POST['Key'],$_POST['String']);
+                    ?></textarea>
             </div>
-        </form>
     </div>
     <div class="div5">
-        <form>
         <div class="row">
             <input type="submit" value="Submit">
         </div>
-        </form>
     </div>
     <div class="div6">
-        <form>
             <div class="row">
-                <input type="submit" value="Submit">
+                <input type="button" value="Click">
             </div>
-        </form>
     </div>
     <div class="div7">
-        <h  style="font-size:60px; color: DodgerBlue;" >Text to Vigenere</h>
+        <h  style="font-size:60px; color: DodgerBlue; float: right;" >Text to Vigenere</h>
     </div>
-</div>
+    <form/>
+    <?php
+    echo $Key;
+    echo $input;
+    ?>
 </body>
 </html>
-<?php
-require 'Vigenere.php';
-
-?>
