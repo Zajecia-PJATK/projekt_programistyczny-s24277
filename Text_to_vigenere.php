@@ -61,7 +61,7 @@ require 'Vigenere.php';
             </div>
     </div>
     <div class="div7">
-        <h style="font-size:60px; color: DodgerBlue; float: right;" >Text to Vigenere</h>
+        <h style="font-size:60px; color: LawnGreen; float: right;" >Text to Vigenere</h>
     </div>
     <form/>
 </body>
