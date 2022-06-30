@@ -45,6 +45,7 @@
     .div5 { grid-area: 6 / 3 / 7 / 4; }
     .div6 { grid-area: 6 / 4 / 7 / 5; }
     .div7 { grid-area: 1 / 2 / 2 / 4; }
+
     /* Dropdown Button */
     .dropbtn {
         border-radius: 0px 0px 60px 0px;
