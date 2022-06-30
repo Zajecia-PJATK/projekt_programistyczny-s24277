@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="stylesheet" href="style.scss">
     <style>
@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-<div class="parent">
+<form class="parent" method="post">
     <div class="div1">
         <div class="dropdown">
             <button class="dropbtn">Codes</button>
@@ -28,48 +28,38 @@
         </div>
     </div>
     <div class="div2">
-        <form>
             <label for="fname">Key</label>
             <div class="col-75">
                 <textarea id="subject" name="Key" placeholder="Key" style="height:50px"><?php echo $_POST['Key'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div3">
-        <form>
             <label for="fname">Your Input</label>
             <div class="col-75">
                 <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div4">
-        <form>
             <label for="fname">Result</label>
             <div class="col-75">
                 <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo Decipher($_POST['String'],$_POST['Key']);
                     ?></textarea>
             </div>
-        </form>
     </div>
     <div class="div5">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
     <div class="div6">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
     <div class="div7">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Vigenere to Text</h>
     </div>
-</div>
+</form>
 </body>
 </html>
 <?php
