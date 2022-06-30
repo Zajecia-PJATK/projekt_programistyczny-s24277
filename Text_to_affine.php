@@ -12,7 +12,11 @@
     .div8 { grid-area: 1 / 2 / 2 / 4; }
 </style>
 <body>
-<div class="parent">
+<?php
+require 'Alphabet.php';
+
+?>
+<form class="parent" method="post">
     <div class="div1">
         <div class="dropdown">
             <button class="dropbtn">Codes</button>
@@ -30,7 +34,7 @@
         <form>
             <label for="fname">First number</label>
             <div class="col-75">
-                <textarea id="subject" name="A" placeholder="First number" style="height:100%"></textarea>
+                <textarea id="subject" name="A" placeholder="First number" style="height:100%"><?php echo $_POST['A'];?></textarea>
             </div>
         </form>
     </div>
@@ -38,7 +42,7 @@
         <form>
             <label for="fname">Second number</label>
             <div class="col-75">
-                <textarea id="subject" name="B" placeholder="Second number" style="height:100%"></textarea>
+                <textarea id="subject" name="B" placeholder="Second number" style="height:100%"><?php echo $_POST['B'];?></textarea>
             </div>
         </form>
     </div>
@@ -46,7 +50,7 @@
         <form>
             <label for="fname">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Your input" style="height:200px"></textarea>
+                <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
         </form>
     </div>
@@ -54,7 +58,7 @@
         <form>
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Result" style="height:200px" disabled></textarea>
+                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo codeAffine($_POST['A'],$_POST['B'],$_POST['String']);?></textarea>
             </div>
         </form>
     </div>
@@ -75,10 +79,6 @@
     <div class="div8">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Text to Affine</h>
     </div>
-</div>
+</form>
 </body>
 </html>
-<?php
-require 'Alphabet.php';
-
-?>

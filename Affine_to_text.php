@@ -12,6 +12,10 @@
     .div8 { grid-area: 1 / 2 / 2 / 4; }
 </style>
 <body>
+<?php
+require 'Alphabet.php';
+
+?>
 <form class="parent" method="post">
     <div class="div1">
         <div class="dropdown">
@@ -29,25 +33,25 @@
     <div class="div2">
             <label for="fname">First number</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="First number" style="height:100%"></textarea>
+                <textarea id="subject" name="A" placeholder="First number" style="height:100%"><?php echo $_POST['A'];?></textarea>
             </div>
     </div>
     <div class="div3">
             <label for="fname">Second number</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Second number" style="height:100%"></textarea>
+                <textarea id="subject" name="B" placeholder="Second number" style="height:100%"><?php echo $_POST['B'];?></textarea>
             </div>
     </div>
     <div class="div4">
             <label for="fname">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="input_box" placeholder="Your input" style="height:200px"></textarea>
+                <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
     </div>
     <div class="div5">
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="result_box" placeholder="Result" style="height:200px" disabled><?php echo $_POST['input_box']; ?></textarea>
+                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo decodeAffine($_POST['A'],$_POST['B'],$_POST['String']); ?></textarea>
             </div>
     </div>
     <div class="div6">
@@ -67,7 +71,3 @@
 
 </body>
 </html>
-<?php
-require 'Alphabet.php';
-
-?>

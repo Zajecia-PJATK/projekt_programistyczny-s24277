@@ -10,7 +10,11 @@
     .div6 { grid-area: 1 / 2 / 2 / 4; }
 </style>
 <body>
-<div class="parent">
+<?php
+require 'Morse.php';
+
+?>
+<form class="parent" method="post">
     <div class="div1">
         <div class="dropdown">
             <button class="dropbtn">Codes</button>
@@ -28,7 +32,7 @@
         <form>
             <label for="fname">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Your input" style="height:200px"></textarea>
+                <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
         </form>
     </div>
@@ -36,7 +40,7 @@
         <form>
             <label for="fname">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Result" style="height:200px" disabled></textarea>
+                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo codeMorse($_POST['String']);?></textarea>
             </div>
         </form>
     </div>
@@ -57,10 +61,6 @@
     <div class="div6">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Text to Morse</h>
     </div>
-</div>
+</form>
 </body>
 </html>
-<?php
-require 'Morse.php';
-
-?>
