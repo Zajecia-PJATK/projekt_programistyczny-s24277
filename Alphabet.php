@@ -52,13 +52,15 @@ function codeAffine(int $a,int $b,$string)
             $decode[$i] = ($a * $value + $b) % 26;
         }
     }
+    $result = array();
     foreach ($decode as $value) {
         if($value == " "){
-            echo " ";
+            $result[$value] =  " ";
         }else{
-            echo $affine[$value];
+            $result[$value] =  $affine[$value];
         }
     }
+    return $result;
 }
 
 

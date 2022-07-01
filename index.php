@@ -37,8 +37,7 @@ require 'Morse.php';
     <div class="div3">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php $array=codeMorse($_POST['String']);
-                    echo Printmorse($array);
+                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo "dziala";
                     ?></textarea>
             </div>
     </div>
