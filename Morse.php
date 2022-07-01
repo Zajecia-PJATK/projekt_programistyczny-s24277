@@ -62,8 +62,8 @@ function codeMorse($string)
 }
 
 function Printmorse(array $chars){
-    foreach ($chars as $char){
-        echo $chars[0];
+    foreach ($chars as $value){
+        echo $chars[$value];
     }
 }
 
