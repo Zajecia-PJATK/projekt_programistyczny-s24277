@@ -31,13 +31,13 @@ include_once 'Morse.php';
     <div class="div2">
             <label for="String">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
+                <textarea id="String" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
     </div>
     <div class="div3">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo $morse -> DecodingNormalMorse($_POST['String']);?></textarea>
+                <textarea id="Result" name="Result" placeholder="Result" style="height:200px" disabled><?php echo $morse -> DecodingNormalMorse($_POST['String']);?></textarea>
             </div>
     </div>
     <div class="div4">
@@ -46,9 +46,41 @@ include_once 'Morse.php';
             </div>
     </div>
     <div class="div5">
-            <div class="row">
-                <input type="submit" value="Submit">
-            </div>
+        <input class="button_up" type="file" name="inputfile"
+               id="inputfile">
+        <br>
+        <script type="text/javascript">
+            document.getElementById('inputfile')
+                .addEventListener('change', function () {
+                    var fr = new FileReader();
+                    fr.onload = function () {
+                        document.getElementById('String')
+                            .textContent = fr.result;
+                    }
+                    fr.readAsText(this.files[0]);
+                })
+        </script>
+        <input id="Download" type="button" value="Download" onclick="saveTextAsFile(document.getElementById('Result').value,'Morse.txt');" />
+        <script>
+            function saveTextAsFile(textToWrite, fileNameToSaveAs) {
+                var textFileAsBlob = new Blob([textToWrite], {type: 'text/plain'});
+                var downloadLink = document.createElement("a");
+                downloadLink.download = fileNameToSaveAs;
+                downloadLink.innerHTML = "Download File";
+                if (window.webkitURL != null) {
+                    //chrome
+                    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+                } else {
+                    // Firefox
+                    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+                    downloadLink.onclick = destroyClickedElement;
+                    downloadLink.style.display = "none";
+                    document.body.appendChild(downloadLink);
+                }
+                downloadLink.click();
+            }
+
+        </script>
     </div>
     <div class="div6">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Morse to Text</h>

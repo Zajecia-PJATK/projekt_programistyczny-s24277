@@ -54,7 +54,6 @@ function __construct()
 
 function codeMorse($string)
 {
-    global $morse;
     $chars = array();
 // Checking if character is uppercase or lowercase and adding that information to that character
     foreach (str_split($string) as $value) {
@@ -62,7 +61,7 @@ function codeMorse($string)
     }
     $STRING = strtoupper($string);
     foreach (str_split($STRING) as $i => $value) {
-        $chars[$i][] = $morse[$value];
+        $chars[$i][] = Morse::morse[$value];
     }
     return $chars;
 }
@@ -74,12 +73,12 @@ return $result;
 }
 
 function decodingMorse(array $chars){
-    global $esrom;
+
 
 // Decoding my morse
     $srahc = array();
     foreach ($chars as $char) {
-        $srahc[] = $esrom[$char[0]];
+        $srahc[] = $this -> esrom[$char[0]];
     }
     // Checking if uppercase or lowercase and printing in alphabet
 $i =0;
@@ -94,14 +93,13 @@ return $srahc;
 
 function DecodingNormalMorse($input)
 {
-    global $esrom;
 //Decoding normal morse
     $decode = explode(' ', preg_replace('/ {5}/', ' | ', $input));
     foreach ($decode as $value) {
         if ($value == "|") {
             echo " ";
         } else {
-            echo $esrom[$value];
+            echo $this ->esrom[$value];
         }
 
     }
