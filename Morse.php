@@ -1,5 +1,7 @@
 <?php
-$morse = array(
+class Morse{
+    public $esrom;
+const morse = array(
     'A' => ".-" ,
     'B' => "-...",
     'C' => "-.-.",
@@ -44,7 +46,11 @@ $morse = array(
 );
 
 // Morse to alphabet
-$esrom = array_flip($morse);
+function __construct()
+{$this->esrom = array_flip(Morse::morse);
+}
+
+
 
 function codeMorse($string)
 {
@@ -78,12 +84,9 @@ function decodingMorse(array $chars){
     // Checking if uppercase or lowercase and printing in alphabet
 $i =0;
 foreach ($chars as $char) {
-    if($char["upper"] == true){
-        $srahc[$i] =  $srahc[$i];
-    }
-    else{
+    if(!$char["upper"]) {
         $srahc[$i] = strtolower($srahc[$i]);
-    }
+}
     $i++;
 }
 return $srahc;
@@ -103,4 +106,5 @@ function DecodingNormalMorse($input)
 
     }
 }
-
+}
+$morse = new Morse();

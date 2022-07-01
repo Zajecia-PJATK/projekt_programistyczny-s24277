@@ -11,7 +11,7 @@
 </style>
 <body>
 <?php
-require 'Morse.php';
+include_once 'Morse.php';
 
 ?>
 <form class="parent" method="post">
@@ -37,7 +37,7 @@ require 'Morse.php';
     <div class="div3">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo DecodingNormalMorse($_POST['String']);?></textarea>
+                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo $morse -> DecodingNormalMorse($_POST['String']);?></textarea>
             </div>
     </div>
     <div class="div4">
