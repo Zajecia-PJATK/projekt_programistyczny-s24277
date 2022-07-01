@@ -12,7 +12,6 @@
 <body>
 <?php
 require 'Morse.php';
-ini_set("extension = gmp","gmp")
 ?>
 <form class="parent" method="post">
     <div class="div1">
@@ -48,9 +47,21 @@ ini_set("extension = gmp","gmp")
             </div>
     </div>
     <div class="div5">
-            <div class="row">
-                <input type="submit" value="Submit">
-            </div>
+        <input class="button_up" type="file" name="inputfile"
+               id="inputfile">
+        <br>
+
+        <script type="text/javascript">
+            document.getElementById('inputfile')
+                .addEventListener('change', function () {
+                    var fr = new FileReader();
+                    fr.onload = function () {
+                        document.getElementById('text1')
+                            .textContent = fr.result;
+                    }
+                    fr.readAsText(this.files[0]);
+                })
+        </script>
     </div>
     <div class="div6">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Text to Morse</h>
