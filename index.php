@@ -2,13 +2,6 @@
 <html>
 <link rel="stylesheet" href="style.scss">
 <style>
-    .parent {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        grid-column-gap: 10px;
-        grid-row-gap: 0px;
-    }
     .div1 { grid-area: 1 / 1 / 2 / 2; }
     .div2 { grid-area: 2 / 2 / 4 / 5; }
     .div3 { grid-area: 4 / 2 / 6 / 5; }
@@ -44,7 +37,7 @@ require 'Morse.php';
     <div class="div3">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php vardump(codeMorse($_POST['String']));?></textarea>
+                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo "dziala";?></textarea>
             </div>
     </div>
     <div class="div4">
