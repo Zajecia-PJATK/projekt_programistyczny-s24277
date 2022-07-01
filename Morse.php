@@ -60,7 +60,11 @@ function codeMorse($string)
     }
     return $chars;
 }
-
+function Printmorse(array $chars){
+    foreach ($chars as $char){
+        echo $chars[0];
+    }
+}
 
 function decodingMorse(array $chars){
     global $esrom;
