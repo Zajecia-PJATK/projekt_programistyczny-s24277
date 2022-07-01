@@ -37,7 +37,11 @@ include_once 'Morse.php';
     <div class="div3">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="Result" name="Result" placeholder="Result" style="height:200px" disabled><?php echo $morse -> DecodingNormalMorse($_POST['String']);?></textarea>
+                <textarea id="Result" name="Result" placeholder="Result" style="height:200px" disabled><?php
+                    $text = $morse -> DecodingNormalMorse($_POST['String']);
+                    $breaks = array("<br />","<br>","<br/>");
+                    $text = str_ireplace($breaks, "\r\n", $text);
+                    echo $text;?></textarea>
             </div>
     </div>
     <div class="div4">
@@ -80,6 +84,17 @@ include_once 'Morse.php';
                 downloadLink.click();
             }
 
+        </script>
+        <button onclick="copytext()">Copy text</button>
+        <script>
+            function copytext() {
+                /* Get the text field */
+                var copyText = document.getElementById("Result");
+                /* Select the text field */
+                copyText.select();
+                /* Copy the text inside the text field */
+                navigator.clipboard.writeText(copyText.value);
+            }
         </script>
     </div>
     <div class="div6">

@@ -36,7 +36,9 @@ include_once 'Morse.php';
     <div class="div3">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="Result" name="Result" placeholder="Result" style="height:200px" disabled><?php $array = $morse -> codeMorse($_POST["String"]);
+                <textarea id="Result" name="Result" placeholder="Result" style="height:200px" disabled><?php
+                    $nonewline = nl2br($_POST["String"]);
+                    $array = $morse -> codeMorse($nonewline);
                     echo $morse -> printmorse($array);
                     ?></textarea>
             </div>
@@ -81,6 +83,18 @@ include_once 'Morse.php';
                 downloadLink.click();
             }
 
+        </script>
+
+        <button onclick="copytext()">Copy text</button>
+        <script>
+            function copytext() {
+                /* Get the text field */
+                var copyText = document.getElementById("Result");
+                /* Select the text field */
+                copyText.select();
+                /* Copy the text inside the text field */
+                navigator.clipboard.writeText(copyText.value);
+            }
         </script>
         <div class="row">
             <div id="twitterbutton">Get from Twitter</div>

@@ -90,6 +90,17 @@ require 'Vigenere.php';
             }
 
         </script>
+        <button onclick="copytext()">Copy text</button>
+        <script>
+            function copytext() {
+                /* Get the text field */
+                var copyText = document.getElementById("Result");
+                /* Select the text field */
+                copyText.select();
+                /* Copy the text inside the text field */
+                navigator.clipboard.writeText(copyText.value);
+            }
+        </script>
     </div>
     <div class="div7">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Vigenere to Text</h>
