@@ -62,9 +62,11 @@ function codeMorse($string)
 }
 
 function Printmorse(array $chars){
-    foreach ($chars as $value){
-        echo $chars[$value];
+    $result = array();
+    foreach ($chars as $i => $value){
+        $result[$i] =  $chars[$value];
     }
+    return $result;
 }
 
 function decodingMorse(array $chars){
