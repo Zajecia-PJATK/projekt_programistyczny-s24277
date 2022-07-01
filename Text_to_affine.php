@@ -3,6 +3,13 @@
 <head>
 <link rel="stylesheet" href="style.scss">
 <style>
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+    }
     .div1 { grid-area: 1 / 1 / 2 / 2; }
     .div2 { grid-area: 2 / 2 / 3 / 3; }
     .div3 { grid-area: 3 / 2 / 4 / 3; }
@@ -33,20 +40,16 @@ require 'Alphabet.php';
         </div>
     </div>
     <div class="div2">
-        <form>
             <label for="A">First number</label>
             <div class="col-75">
                 <textarea id="subject" name="A" placeholder="First number" style="height:100%"><?php echo $_POST['A'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div3">
-        <form>
             <label for="B">Second number</label>
             <div class="col-75">
                 <textarea id="subject" name="B" placeholder="Second number" style="height:100%"><?php echo $_POST['B'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div4">
         <form>
@@ -54,29 +57,22 @@ require 'Alphabet.php';
             <div class="col-75">
                 <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div5">
-        <form>
             <label for="Result">Result</label>
             <div class="col-75">
                 <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo codeAffine($_POST['A'],$_POST['B'],$_POST['String']);?></textarea>
             </div>
-        </form>
     </div>
     <div class="div6">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
     <div class="div7">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
     <div class="div8">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Text to Affine</h>

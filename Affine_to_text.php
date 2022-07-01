@@ -3,6 +3,13 @@
 <head>
     <link rel="stylesheet" href="style.scss">
     <style>
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 0px;
+        }
         .div1 { grid-area: 1 / 1 / 2 / 2; }
         .div2 { grid-area: 2 / 2 / 3 / 3; }
         .div3 { grid-area: 3 / 2 / 4 / 3; }

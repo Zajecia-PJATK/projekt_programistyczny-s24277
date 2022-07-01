@@ -2,6 +2,13 @@
 <html>
 <link rel="stylesheet" href="style.scss">
 <style>
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+    }
     .div1 { grid-area: 1 / 1 / 2 / 2; }
     .div2 { grid-area: 2 / 2 / 4 / 5; }
     .div3 { grid-area: 4 / 2 / 6 / 5; }
@@ -29,34 +36,26 @@ require 'Morse.php';
         </div>
     </div>
     <div class="div2">
-        <form>
             <label for="String">Your input</label>
             <div class="col-75">
                 <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div3">
-        <form>
             <label for="Result">Result</label>
             <div class="col-75">
                 <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo DecodingNormalMorse($_POST['String']);?></textarea>
             </div>
-        </form>
     </div>
     <div class="div4">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit" >
             </div>
-        </form>
     </div>
     <div class="div5">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
     <div class="div6">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Morse to Text</h>
