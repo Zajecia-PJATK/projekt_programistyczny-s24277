@@ -53,7 +53,7 @@ require 'Alphabet.php';
     <div class="div5">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo decodeAffine($_POST['A'],$_POST['B'],$_POST['String']); ?></textarea>
+                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php decodeAffine($_POST['A'],$_POST['B'],$_POST['String']); ?></textarea>
             </div>
     </div>
     <div class="div6">
