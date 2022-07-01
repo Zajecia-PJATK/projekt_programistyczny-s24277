@@ -93,4 +93,3 @@ function decodeAffine(int $a, int $b,$string){
         }
     }
 }
-echo codeAffine(3,5,"hello");
