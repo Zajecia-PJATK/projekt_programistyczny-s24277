@@ -60,6 +60,7 @@ function codeMorse($string)
     }
     return $chars;
 }
+
 function Printmorse(array $chars){
     foreach ($chars as $char){
         echo $chars[0];
