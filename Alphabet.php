@@ -55,9 +55,9 @@ function codeAffine(int $a,int $b,$string)
     $result = array();
     foreach ($decode as $value) {
         if($value == " "){
-            $result[$value] =  " ";
+            $result =  " ";
         }else{
-            $result[$value] =  $affine[$value];
+            $result =  $affine[$value];
         }
     }
     return $result;
@@ -93,3 +93,4 @@ function decodeAffine(int $a, int $b,$string){
         }
     }
 }
+echo codeAffine(3,5,"hello");

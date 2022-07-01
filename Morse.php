@@ -61,12 +61,10 @@ function codeMorse($string)
     return $chars;
 }
 
-function Printmorse(array $chars){
-    $result = array();
-    foreach ($chars as $i => $value){
-        $result[$i] =  $chars[$value];
-    }
-    return $result;
+function printmorse($chars){
+    $array = array_column($chars,"0");
+$result = implode(" ",$array);
+return $result;
 }
 
 function decodingMorse(array $chars){
@@ -105,3 +103,4 @@ function DecodingNormalMorse($input)
 
     }
 }
+
