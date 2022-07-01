@@ -30,13 +30,13 @@ require 'Morse.php';
     <div class="div2">
             <label for="String">Your input</label>
             <div class="col-75">
-                <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
+                <textarea id="String" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
     </div>
     <div class="div3">
             <label for="Result">Result</label>
             <div class="col-75">
-                <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php $array = codeMorse($_POST["String"]);
+                <textarea id="Result" name="Result" placeholder="Result" style="height:200px" disabled><?php $array = codeMorse($_POST["String"]);
                     echo printmorse($array);
                     ?></textarea>
             </div>
@@ -56,7 +56,7 @@ require 'Morse.php';
                 .addEventListener('change', function () {
                     var fr = new FileReader();
                     fr.onload = function () {
-                        document.getElementById('text1')
+                        document.getElementById('String')
                             .textContent = fr.result;
                     }
                     fr.readAsText(this.files[0]);
