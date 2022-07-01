@@ -36,34 +36,26 @@ require 'Morse.php';
         </div>
     </div>
     <div class="div2">
-        <form>
             <label for="String">Your input</label>
             <div class="col-75">
                 <textarea id="subject" name="String" placeholder="Your input" style="height:200px"><?php echo $_POST['String'];?></textarea>
             </div>
-        </form>
     </div>
     <div class="div3">
-        <form>
             <label for="Result">Result</label>
             <div class="col-75">
                 <textarea id="subject" name="Result" placeholder="Result" style="height:200px" disabled><?php echo codeMorse($_POST['String']);?></textarea>
             </div>
-        </form>
     </div>
     <div class="div4">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
     <div class="div5">
-        <form>
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
-        </form>
     </div>
     <div class="div6">
         <h  style="font-size:60px; color: LawnGreen; float: right;" >Text to Morse</h>
